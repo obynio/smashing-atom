@@ -1,0 +1,43 @@
+.widget-ratp {
+  background-color: #00AA91;
+
+  ul {
+    margin-top: -15px;
+  }
+
+  li.line {
+    margin-bottom: 20px;
+
+    table tr td {
+      width: 35%;
+    }
+
+    table tr td:nth-child(2) {
+      width: 30%;
+    }
+  }
+
+  img.icon {
+    max-height: 55px;
+    max-width: 75px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .direction {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: small;
+    display: block;
+    margin-top: -10px;
+  }
+
+  .time {
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 600;
+    font-size: 70px;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
