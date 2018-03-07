@@ -18,22 +18,32 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     //display: none;
     overflow: hidden;
   }
-
-  .title {
-    color: white;
-    font-size: 20px;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: elipsis;
-    white-space: nowrap;
+  
+  .event-container {
+    margin: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
     font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
-  .start {
-    color: #ccccff;
-    font-size: 32px;
+  .label {
+    float: left;
     text-align: left;
-    padding-left: 30px;
+    width: 60%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 22px;
   }
 
+  .value {
+    float: right;
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+  .updated-at {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }

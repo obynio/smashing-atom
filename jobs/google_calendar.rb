@@ -2,20 +2,14 @@ require 'net/http'
 require 'icalendar'
 require 'open-uri'
 
-# List of calendars
-#
-# Format:
-#   <name> => <uri>
-# Example:
-#   hangouts: "https://www.google.com/calendar/ical/<hash>.calendar.google.com/private-<hash>/hangouts.ics"
-calendars = {SRS: "https://chronosvenger.me/?classe=SRS.ics"}
+calendars = {srs: "https://chronosvenger.me/?classe=SRS.ics"}
 
-SCHEDULER.every '10s', :first_in => 0 do |job|
+SCHEDULER.every '1m', :first_in => 0 do |job|
 
   calendars.each do |cal_name, cal_uri|
 
     ics  = open(cal_uri) { |f| f.read }
-    cal = Icalendar.parse(ics).first
+    cal = Icalendar::Calendar.parse(ics).first
     events = cal.events
 
     # select only current and upcoming events
@@ -28,6 +22,7 @@ SCHEDULER.every '10s', :first_in => 0 do |job|
     events = events.map do |e|
       {
         title: e.summary,
+        location: e.location.lines.first,
         start: e.dtstart.to_time.to_i - 3600,
         end: e.dtend.to_time.to_i - 3600
       }
