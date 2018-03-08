@@ -4,7 +4,7 @@ require 'open-uri'
 
 calendars = {srs: "https://chronosvenger.me/?classe=SRS.ics"}
 
-SCHEDULER.every '1m', :first_in => 0 do |job|
+SCHEDULER.every '10m', :first_in => 0 do |job|
 
   calendars.each do |cal_name, cal_uri|
 
