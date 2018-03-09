@@ -13,6 +13,7 @@ GEM
     eventmachine (1.2.5)
     execjs (2.7.0)
     icalendar (2.4.1)
+    json (2.1.0)
     multi_json (1.13.1)
     mustermann (1.0.2)
     rack (2.0.4)
@@ -62,6 +63,7 @@ PLATFORMS
 
 DEPENDENCIES
   icalendar
+  json
   smashing
 
 BUNDLED WITH
