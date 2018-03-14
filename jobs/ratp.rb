@@ -21,8 +21,8 @@ SCHEDULER.every '1m', first_in: 0 do |job|
             {
                 name: "Noct 15",
                 icon: "ratp_noct_15.png",
-                in: {name: "Asnière", values: get_next('noctiliens', '15/gabriel+peri+metro/R', 0)},
-                out: {name: "Asnière", values: get_next('noctiliens', '15/gabriel+peri+metro/R', 1)}
+                in: {name: "Gabriel Peri", values: get_next('noctiliens', '15/dauphin+++anatole+france/R', 0)},
+                out: {name: "Gabriel Peri", values: get_next('noctiliens', '15/dauphin+++anatole+france/R', 1)}
             },
             {
                 name: "Noct 22",
