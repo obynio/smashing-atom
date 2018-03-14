@@ -29,18 +29,18 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   .label {
     float: left;
     text-align: left;
-    width: 60%;
+    width: 300px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 22px;
+    font-size: 28px;
   }
 
   .value {
     float: right;
     margin-left: 12px;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 28px;
   }
 
   .updated-at {
