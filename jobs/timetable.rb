@@ -28,7 +28,7 @@ SCHEDULER.every '10m', :first_in => 0 do |job|
       }
     end
 
-    send_event("google_calendar_#{cal_name}", {events: events})
+    send_event("timetable_#{cal_name}", {events: events})
   end
 
 end

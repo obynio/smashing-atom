@@ -5,4 +5,4 @@ Batman.mixin Batman.Filters,
     end = moment.unix(event.end)
     "#{start.format('ddd, HH:mm') + " > " + end.format('HH:mm');}"
 
-class Dashing.GoogleCalendar extends Dashing.Widget
+class Dashing.Timetable extends Dashing.Widget
