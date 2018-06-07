@@ -12,5 +12,5 @@ SCHEDULER.every '1m' do
   eth_price = json_response['data']['amount']
   eth_price = '%.2f' % eth_price.to_f
   #puts eth_price
-  send_event('ethprice', { value: eth_price.to_f} )
+  send_event('ethprice', value: eth_price.to_f)
 end
