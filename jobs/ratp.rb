@@ -9,12 +9,21 @@ def get_next(type, path, row)
     url = "#{API}#{type}/#{path}"
     output = open(url)
     timetables = JSON.parse(output.read)
-    next_one = timetables['result']['schedules'][row]['message'].scan(/\d+/).first
-    return "-" if next_one.to_s.empty?
-    next_one
+    schedules = timetables['result']['schedules']
+    if schedules.count >= row
+        if schedules[row]['message'] == "A l'approche"
+            return "0"
+        else
+            next_one = schedules[row]['message'].scan(/\d+/).first
+            return "-" if next_one.to_s.empty?
+            next_one
+        end
+    else
+        return "?"
+    end
 end
 
-SCHEDULER.every '1m', first_in: 0 do |job|
+SCHEDULER.every '10s', first_in: 0 do |job|
     time = Time.new
     if 0 < time.hour && time.hour < 5
         lines = [
