@@ -1,5 +1,5 @@
 pipeline:
-  docker:
+  deploy:
     image: plugins/docker
     repo: obynio/wasabi
     tags: latest
