@@ -1,0 +1,7 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    repo: obynio/wasabi
+    tags: latest
+    dockerfile: wasabi.dockerfile
+    secrets: [ docker_username, docker_password ]
