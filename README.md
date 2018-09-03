@@ -1,8 +1,8 @@
 # wasabi
 
-> The human tongue is like wasabi. It's very powerful, and should be used sparingly.
+> It works on my machine
 
-**wasabi** a personal dashboard for my own purposes running on a Raspberry Pi. The codebase is based on the [smashing](https://github.com/Smashing/smashing) modular dashboard with custom widgets on top of it.
+**wasabi** is my personal dashboard running on a Raspberry Pi. The codebase is based on the [smashing](https://github.com/Smashing/smashing) modular dashboard with custom widgets on top of it.
 
 ## Features
 
