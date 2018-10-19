@@ -1,4 +1,5 @@
 require 'nokogiri'
+require 'net/http'
 
 class BbcNews
     def initialize()

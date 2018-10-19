@@ -6,19 +6,23 @@ require 'json'
 API = "https://api-ratp.pierre-grimaud.fr/v3/schedules/"
 
 def get_next(type, path, row)
-    url = "#{API}#{type}/#{path}"
-    output = open(url)
-    timetables = JSON.parse(output.read)
-    schedules = timetables['result']['schedules']
-    if schedules.count >= row
-        if schedules[row]['message'] == "A l'approche"
-            return "0"
+    begin
+        url = "#{API}#{type}/#{path}"
+        output = open(url)
+        timetables = JSON.parse(output.read)
+        schedules = timetables['result']['schedules']
+        if schedules.count >= row
+            if schedules[row]['message'] == "A l'approche"
+                return "0"
+            else
+                next_one = schedules[row]['message'].scan(/\d+/).first
+                return "-" if next_one.to_s.empty?
+                next_one
+            end
         else
-            next_one = schedules[row]['message'].scan(/\d+/).first
-            return "-" if next_one.to_s.empty?
-            next_one
+            return "?"
         end
-    else
+    rescue
         return "?"
     end
 end
