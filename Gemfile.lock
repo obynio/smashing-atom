@@ -14,6 +14,7 @@ GEM
     execjs (2.7.0)
     icalendar (2.4.1)
     json (2.1.0)
+    mini_magick (4.9.2)
     mini_portile2 (2.3.0)
     multi_json (1.13.1)
     mustermann (1.0.2)
@@ -67,6 +68,7 @@ PLATFORMS
 DEPENDENCIES
   icalendar
   json
+  mini_magick
   nokogiri
   smashing
   thin

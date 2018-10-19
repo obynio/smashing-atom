@@ -1,0 +1,52 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #50A4AF;
+
+$vlow-color:        #79BC6A;
+$low-color:         #BBCF4C;
+$medium-color:      #EEC20B;
+$high-color:        #F29305;
+$vhigh-color:       #960018;
+
+// ----------------------------------------------------------------------------
+// Widget-airparif styles
+// ----------------------------------------------------------------------------
+.widget-airparif {
+	background-color: $background-color;
+
+	.summary {
+        text-align: left;
+        margin-left: 20px;
+    }
+    
+    .image {
+        max-width: 280px;
+    }
+
+	.todayLine, .tomorrowLine {
+		margin-top: 10px;
+	}
+
+	#todayIndex, #tomorrowIndex {
+		font-weight: bold;
+		padding-left: 3px;
+		padding-right: 3px;
+	}
+
+	.vlow {
+		background-color: $vlow-color;
+	}
+	.low {
+		background-color: $low-color;
+	}
+	.medium {
+		background-color: $medium-color;
+	}
+	.high {
+		background-color: $high-color;
+	}
+	.vhigh {
+		background-color: $vhigh-color;
+	}
+}
