@@ -5,3 +5,5 @@ pipeline:
     tags: latest
     dockerfile: wasabi.dockerfile
     secrets: [ docker_username, docker_password ]
+    when:
+      event: [ push ]
