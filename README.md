@@ -1,8 +1,8 @@
-# wasabi
+# cicada
 
-> It works on my machine
+> 3301
 
-**wasabi** is my personal dashboard running on a Raspberry Pi. The codebase is based on the [smashing](https://github.com/Smashing/smashing) modular dashboard with custom widgets on top of it.
+**cicada** is my personal dashboard running on a Raspberry Pi. The codebase is based on the [smashing](https://github.com/Smashing/smashing) modular dashboard with custom widgets on top of it.
 
 ## Features
 
@@ -12,6 +12,9 @@
 * current ethereum price
 * nearby bus and metro schedules
 * current weather in paris
+* air pollution index and map
+* xkcd daily comic
+* bbc newsfeed
 
 ## Installation
 
@@ -20,8 +23,8 @@
 $ gem install bundler
 # Install smashing
 $ gem install smashing
-# Install the bundle of wasabi specific gems
+# Install the bundle of cicada specific gems
 $ bundle
-# Start wasabi
+# Start cicada
 $ smashing start
 ```

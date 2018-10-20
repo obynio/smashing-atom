@@ -1,9 +1,9 @@
 pipeline:
   deploy:
     image: plugins/docker
-    repo: obynio/wasabi
+    repo: obynio/cicada
     tags: latest
-    dockerfile: wasabi.dockerfile
+    dockerfile: cicada.dockerfile
     secrets: [ docker_username, docker_password ]
     when:
       event: [ push ]
