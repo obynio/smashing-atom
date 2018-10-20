@@ -63,7 +63,6 @@ class Dashing.Ratp extends Dashing.Widget
     oldValue = $(spanId).html()
     if oldValue != newValue
       $(spanId).fadeOut(->
-        $(tdId).css('font-size', '')
         $(this).html(newValue).fadeIn(->
           if outer < scroll
             $(tdId).addClass 'scroll'

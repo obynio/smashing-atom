@@ -3,10 +3,10 @@
 // ----------------------------------------------------------------------------
 $background-color:  #607d8b;
 
-$rounded-width:     1em;
-$rounded-height:    1em;
-$rect-width:        1.72em;
-$rect-height:       1em;
+$rounded-width:     1.8em;
+$rounded-height:    1.8em;
+$rect-width:        2.3em;
+$rect-height:       1.5em;
 
 // ----------------------------------------------------------------------------
 // Widget-ratp styles
@@ -32,7 +32,11 @@ $rect-height:       1em;
         text-align: left;
 		white-space: nowrap;
 		max-width: 0;
-	}
+    }
+    
+    tr {
+        height: 50px;
+    }
 
 	.transport {
 		width: 12%;
@@ -53,11 +57,11 @@ $rect-height:       1em;
     }
     
     .time {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 
     .dest {
-        font-size: 1.1em;
+        font-size: 1.3em;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;

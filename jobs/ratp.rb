@@ -4,6 +4,7 @@ require_relative 'ratp_utils'
 # (or alternatively, define them in config/settings.rb)
 
 TRANSPORTS = [
+  Transport.new(Type::BUS, '185', 'Roger Salengro - Fontainebleau', 'Choisy Sud'),
   Transport.new(Type::METRO, '7', 'Porte d\'Italie', 'La Courneuve-8-Mai-1945'),
   Transport.new(Type::METRO, '7', 'Porte d\'Italie', 'Mairie d\'Ivry / Villejuif-Louis Aragon'),
   Transport.new(Type::TRAM, '3a', 'Porte d\'Italie', 'Porte de Vincennes'),
