@@ -35,15 +35,15 @@ $rect-height:       1.5em;
     }
     
     tr {
-        height: 50px;
+        height: 45px;
     }
 
 	.transport {
-		width: 12%;
+		width: 16%;
 		text-align: center;
 	}
 	.dest {
-		width: 62%;
+		width: 58%;
 	}
 
 	.icon {
@@ -57,10 +57,10 @@ $rect-height:       1.5em;
     }
     
     .time {
-        font-size: 1.4em;
+        font-size: 1.3em;
+        overflow: hidden;
+        text-overflow: ellipsis;
         white-space: nowrap;
-		overflow: hidden;
-		box-sizing: border-box;
     }
 
     .dest {
