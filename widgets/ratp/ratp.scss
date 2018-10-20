@@ -1,43 +1,65 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #607d8b;
+
+$rounded-width:     1em;
+$rounded-height:    1em;
+$rect-width:        1.72em;
+$rect-height:       1em;
+
+// ----------------------------------------------------------------------------
+// Widget-ratp styles
+// ----------------------------------------------------------------------------
 .widget-ratp {
-  background-color: #00AA91;
+	background-color: $background-color;
 
-  ul {
-    margin-top: -15px;
-  }
+	.bus, .noctilien {
+		width: $rect-width;
+		height: $rect-height;
+	}
+	.metro, .tram, .rer {
+		width: $rounded-width;
+		height: $rounded-height;
+	}
 
-  li.line {
-    margin-bottom: 20px;
+	table {
+		border-collapse: separate;
+		border-spacing: 4px 0px;
+	}
 
-    table tr td {
-      width: 35%;
+	td {
+        text-align: left;
+		white-space: nowrap;
+		max-width: 0;
+	}
+
+	.transport {
+		width: 12%;
+		text-align: center;
+	}
+	.dest {
+		width: 62%;
+	}
+
+	.icon {
+		vertical-align: text-bottom;
+	}
+
+	.scroll {
+		white-space: nowrap;
+		overflow: hidden;
+		box-sizing: border-box;
+    }
+    
+    .time {
+        font-size: 1.2em;
     }
 
-    table tr td:nth-child(2) {
-      width: 30%;
+    .dest {
+        font-size: 1.1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
-  }
-
-  img.icon {
-    max-height: 55px;
-    max-width: 75px;
-    display: block;
-    margin: 0 auto;
-  }
-
-  .direction {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: small;
-    display: block;
-    margin-top: -10px;
-  }
-
-  .time {
-    color: rgba(0, 0, 0, 0.9);
-    font-weight: 600;
-    font-size: 70px;
-  }
-
-  .updated-at {
-    color: rgba(0, 0, 0, 0.3);
-  }
 }

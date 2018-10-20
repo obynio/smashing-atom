@@ -1,64 +1,70 @@
+require_relative 'ratp_utils'
 
-require 'open-uri'
-require 'json'
+# Uncomment and define transports below
+# (or alternatively, define them in config/settings.rb)
 
-# Unofficial API but it works great
-API = "https://api-ratp.pierre-grimaud.fr/v3/schedules/"
+TRANSPORTS = [
+  Transport.new(Type::METRO, '7', 'Porte d\'Italie', 'La Courneuve-8-Mai-1945'),
+  Transport.new(Type::METRO, '7', 'Porte d\'Italie', 'Mairie d\'Ivry / Villejuif-Louis Aragon'),
+  Transport.new(Type::TRAM, '3a', 'Porte d\'Italie', 'Porte de Vincennes'),
+  Transport.new(Type::TRAM, '3a', 'Porte d\'Italie', 'Pont Garigliano - Hopital Europeen George Pompidou'),
+  Transport.new(Type::BUS, '185', 'Roger Salengro - Fontainebleau', 'Choisy Sud'),
+  Transport.new(Type::BUS, '131', 'Roger Salengro - Fontainebleau', 'Rungis - la Fraternelle RER'),
+  Transport.new(Type::NOCTILIEN, '15', 'Roger Salengro - Fontainebleau', 'Villejuif - Louis Aragon-Metro'),
+]
 
-def get_next(type, path, row)
-    begin
-        url = "#{API}#{type}/#{path}"
-        output = open(url)
-        timetables = JSON.parse(output.read)
-        schedules = timetables['result']['schedules']
-        if schedules.count >= row
-            if schedules[row]['message'] == "A l'approche"
-                return "0"
-            else
-                next_one = schedules[row]['message'].scan(/\d+/).first
-                return "-" if next_one.to_s.empty?
-                next_one
-            end
-        else
-            return "?"
-        end
-    rescue
-        return "?"
-    end
+# Init and Validate stations and destinations
+stations = {}
+directions = {}
+
+TRANSPORTS.each do |transport|
+  key = line_key(transport)
+  if stations[key].nil?
+    stations[key] = read_stations(transport.type[:api], transport.number)
+  end
+
+  if stations[key][transport.stop].nil?
+    raise ArgumentError, "Unknown stop #{transport.stop}, possible values are #{stations[key].keys}"
+  end
+
+  if directions[key].nil?
+    directions[key] = read_directions(transport.type[:api], transport.number, stations[key], transport.stop)
+  end
+
+  if directions[key][transport.destination].nil?
+    raise ArgumentError, "Unknown destination #{transport.destination}, possible values are #{directions[key].keys}"
+  end
 end
 
-SCHEDULER.every '10s', first_in: 0 do |job|
-    time = Time.new
-    if 0 < time.hour && time.hour < 5
-        lines = [
-            {
-                name: "Noct 15",
-                icon: "ratp_noct_15.png",
-                in: {name: "Gabriel Peri", values: get_next('noctiliens', '15/dauphin+++anatole+france/R', 0)},
-                out: {name: "Gabriel Peri", values: get_next('noctiliens', '15/dauphin+++anatole+france/R', 1)}
-            },
-            {
-                name: "Noct 22",
-                icon: "ratp_noct_22.png",
-                in: {name: "Châtelet", values: get_next('noctiliens', '22/dauphin+++anatole+france/R', 0)},
-                out: {name: "Châtelet", values: get_next('noctiliens', '22/dauphin+++anatole+france/R', 1)}
-            }
-        ]
-    else
-        lines = [
-            {
-                name: "Bus 131",
-                icon: "ratp_bus_131.png",
-                in: {name: "Pt. Italie", values: get_next('bus', '131/ambroise+croizat/R', 0)},
-                out: {name: "Pt. Italie", values: get_next('bus', '131/ambroise+croizat/R', 1)}
-            },
-            {
-                name: "Metro 7",
-                icon: "ratp_metro_7.png",
-                in: {name: "Courneuve", values: get_next('metros', '7/villejuif+leo+lagrange/R', 0)},
-                out: {name: "Courneuve", values: get_next('metros', '7/villejuif+leo+lagrange/R', 1)}
-            }
-        ]
-    end
-    send_event("ratp", {items: lines})
+SCHEDULER.every '10s', first_in: 0 do
+  results = []
+
+  TRANSPORTS.each do |transport|
+    line_key = line_key(transport)
+    type = transport.type[:api]
+    id = transport.number
+    stop = stations[line_key][transport.stop]
+    dir = directions[line_key][transport.destination]
+
+    first_destination, first_time, second_destination, second_time = read_timings(type, id, stop, dir)
+
+    first_time_parsed, second_time_parsed = reword(first_time, second_time)
+    first_destination_parsed, second_destination_parsed = reword_destination(first_destination, second_destination)
+
+    ui_type = transport.type[:ui]
+    stop_escaped = stop.delete('+').delete('\'')
+
+    key = "#{ui_type}-#{id}-#{stop_escaped}-#{dir}"
+
+    results.push(
+      key => {
+        type: ui_type,
+        id: id,
+        d1: first_destination_parsed, t1: first_time_parsed,
+        d2: second_destination_parsed, t2: second_time_parsed
+      }
+    )
+  end
+
+  send_event('ratp', results: results)
 end
