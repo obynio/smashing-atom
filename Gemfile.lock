@@ -14,8 +14,12 @@ GEM
     execjs (2.7.0)
     icalendar (2.4.1)
     json (2.1.0)
+    mini_magick (4.9.2)
+    mini_portile2 (2.3.0)
     multi_json (1.13.1)
     mustermann (1.0.2)
+    nokogiri (1.8.5)
+      mini_portile2 (~> 2.3.0)
     rack (2.0.4)
     rack-protection (2.0.1)
       rack
@@ -64,7 +68,10 @@ PLATFORMS
 DEPENDENCIES
   icalendar
   json
+  mini_magick
+  nokogiri
   smashing
+  thin
 
 BUNDLED WITH
-   1.16.1
+   1.16.6
