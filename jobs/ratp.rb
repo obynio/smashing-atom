@@ -4,7 +4,6 @@ require_relative 'ratp_utils'
 # (or alternatively, define them in config/settings.rb)
 
 TRANSPORTS = [
-  Transport.new(Type::NOCTILIEN, '15', 'Roger Salengro - Fontainebleau', 'Villejuif - Louis Aragon-Metro'),
   Transport.new(Type::METRO, '7', 'Porte d\'Italie', 'La Courneuve-8-Mai-1945'),
   Transport.new(Type::METRO, '7', 'Porte d\'Italie', 'Mairie d\'Ivry / Villejuif-Louis Aragon'),
   Transport.new(Type::TRAM, '3a', 'Porte d\'Italie', 'Porte de Vincennes'),
