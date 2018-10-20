@@ -58,6 +58,9 @@ $rect-height:       1.5em;
     
     .time {
         font-size: 1.4em;
+        white-space: nowrap;
+		overflow: hidden;
+		box-sizing: border-box;
     }
 
     .dest {
