@@ -3,7 +3,7 @@ MAINTAINER Yohann Leon <yohann@leon.re>
 
 WORKDIR /usr/wasabi
 
-RUN apk add --update tzdata curl wget bash ruby ruby-bundler nodejs ruby-dev g++ musl-dev make
+RUN apk add --update tzdata curl wget bash ruby ruby-bundler nodejs ruby-dev g++ musl-dev make imagemagick
 RUN gem install bundler smashing json
 
 ADD . /usr/wasabi
