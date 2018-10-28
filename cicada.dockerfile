@@ -5,6 +5,7 @@ WORKDIR /usr/cicada
 
 RUN apk add --update tzdata curl wget bash ruby ruby-bundler nodejs ruby-dev g++ musl-dev make imagemagick imagemagick-dev
 RUN gem install bundler smashing json
+RUN cp /usr/share/zoneinfo/Europe/Paris /etc/localtime && echo "Europe/Paris" > /etc/timezone
 
 ADD . /usr/cicada
 RUN bundle
