@@ -1,0 +1,105 @@
+$background-color: #9c4274;
+
+.widget-klimato {
+  background-color: $background-color;
+  
+  h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 80px;
+  
+    &:after {
+      content: "\00b0";
+    }
+  }
+
+  h2 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 120px;
+    font-family: "Climacons-Font";
+  }
+
+  h3 {
+    width: 100%;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 2px;
+  }
+
+}
+
+// climacons
+
+.klimato-0:before {
+  content: "\e037";
+}
+
+.klimato-1:before, .klimato-2:before {
+  content: "\e009";
+}
+
+.klimato-3:before, .klimato-4:before, .klimato-37:before, .klimato-38:before, .klimato-39:before, .klimato-45:before, .klimato-47:before {
+  content: "\e025";
+}
+
+.klimato-5:before, .klimato-7:before,.klimato-10:before, .klimato-18:before {
+  content: "\e00f";
+}
+
+.klimato-6:before, .klimato-13:before {
+  content: "\e015";
+}
+
+.klimato-8:before, .klimato-9:before {
+  content: "\e00c";
+}
+
+.klimato-11:before, .klimato-12:before, .klimato-40:before {
+  content: "\e006";
+}
+
+.klimato-14:before, .klimato-15:before, .klimato-16:before {
+  content: "\e018";
+}
+
+.klimato-17:before, .klimato-35:before {
+  content: "\e012";
+}
+
+.klimato-19:before, .klimato-21:before, .klimato-22:before, .klimato-23:before {
+  content: "\e01e";
+}
+
+.klimato-20:before, .klimato-25:before {
+  content: "\e01b";
+}
+
+.klimato-24:before {
+  content: "\e021";
+}
+
+.klimato-26:before, .klimato-44:before {
+  content: "\e000";
+}
+
+.klimato-27:before, .klimato-29:before, .klimato-34:before {
+  content: "\e002";
+}
+
+.klimato-28:before, .klimato-30:before, .klimato-33:before {
+  content: "\e001";
+}
+
+.klimato-31:before {
+  content: "\e02d";
+}
+
+.klimato-32:before, .klimato-36:before  {
+  content: "\e028";
+}
+
+.klimato-41:before, .klimato-42:before, .klimato-43:before, .klimato-46:before {
+  content: "\e036";
+}

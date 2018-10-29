@@ -15,6 +15,7 @@
 * air pollution index and map
 * xkcd daily comic
 * bbc newsfeed
+* fitbit activity tracking
 
 ## Installation
 
