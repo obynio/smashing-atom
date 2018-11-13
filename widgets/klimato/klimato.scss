@@ -1,4 +1,4 @@
-$background-color: #9c4274;
+$background-color:  #272b35;
 
 .widget-klimato {
   background-color: $background-color;
@@ -7,6 +7,7 @@ $background-color: #9c4274;
     display: inline-block;
     vertical-align: middle;
     font-size: 80px;
+    font-weight: 300;
   
     &:after {
       content: "\00b0";
@@ -26,6 +27,7 @@ $background-color: #9c4274;
     text-transform: uppercase;
     font-size: 30px;
     letter-spacing: 2px;
+    font-weight: 300;
   }
 
 }

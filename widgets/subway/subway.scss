@@ -1,5 +1,5 @@
 .widget-subway {
-  background-color: #00AA91;
+  background-color: #272b35;
 
   ul {
     margin-top: -15px;
@@ -25,15 +25,13 @@
   }
 
   .direction {
-    color: rgba(0, 0, 0, 0.5);
-    font-size: small;
     display: block;
-    margin-top: -10px;
+    font-weight: 100;
   }
 
   .time {
-    color: rgba(0, 0, 0, 0.9);
-    font-weight: 600;
+    color: #ffffff;
+    font-weight: 400;
     font-size: 70px;
   }
 
