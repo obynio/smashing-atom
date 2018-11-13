@@ -37,6 +37,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     padding-left: 30px;
     padding-right: 30px;
     font-size: 24px;
+    font-weight: 300;
   }
 
   table tr:last-child td {
@@ -46,7 +47,6 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   .label {
     width:400px;
     max-width:400px;
-    font-weight: 100;
   }
 
   .value {
@@ -56,7 +56,6 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   .location {
     width:200px;
     max-width:200px;
-    font-weight: 300;
     width: 200px;
     text-transform: capitalize;
   }
