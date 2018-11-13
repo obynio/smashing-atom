@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #607d8b;
+$background-color:  #272b35;
 
 $rounded-width:     1.8em;
 $rounded-height:    1.8em;
@@ -35,7 +35,7 @@ $rect-height:       1.5em;
     }
     
     tr {
-        height: 46px;
+        height: 50px;
     }
 
 	.transport {
@@ -60,13 +60,15 @@ $rect-height:       1.5em;
         font-size: 1.3em;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
+		white-space: nowrap;
+		font-weight: 300;
     }
 
     .dest {
         font-size: 1.3em;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
+		white-space: nowrap;
+		font-weight: 100;
     }
 }

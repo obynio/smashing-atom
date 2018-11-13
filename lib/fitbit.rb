@@ -1,4 +1,4 @@
-require "fitgem_oauth2"
+require "fitbit_api"
 require 'yaml'
 require 'json'
 
@@ -7,11 +7,10 @@ class Fitbit
   attr_reader :client
 
   def initialize(options = {})
-    @client  = FitgemOauth2::Client.new(
-      token: ENV['FITBIT_TOKEN'],
-      client_id: ENV['FITBIT_CLIENT_ID'],
-      client_secret: ENV['FITBIT_CLIENT_SECRET']
-    )
+    @client = FitbitAPI::Client.new(client_id: '22D4CQ',
+      client_secret: '99c2541bb3de1e1876475e17d6abb42f',
+      refresh_token: '1e7cb98009096b66611826a3eb502fb14eaede9092b5114f129c677dba55c5cf',
+      expires_at: 28800)
   end
 
   def device
@@ -84,7 +83,7 @@ class Fitbit
   private
 
   def devices
-    @devices ||= client.devices[:body]
+    @devices ||= client.devices
   end
 
   def current_device
@@ -100,7 +99,7 @@ class Fitbit
   end
 
   def distance_unit
-    @distance_unit ||= (client.user_info["user"]["distanceUnit"] == "en_US" ? "miles" : "km")
+    @distance_unit ||= (client.profile["user"]["distanceUnit"] == "en_US" ? "miles" : "km")
   end
 
   def distance_today
@@ -112,7 +111,7 @@ class Fitbit
   end
 
   def goals
-    @goals ||= client.goals('daily')["goals"]
+    @goals ||= client.daily_goals["goals"]
   end
 
   def sorted_leaderboard

@@ -5,6 +5,9 @@ class Dashing.Airparif extends Dashing.Widget
       tomorrowLine.hide()
     else if data.demain != null && tomorrowLine.is(':hidden')
       tomorrowLine.show()
+    
+    to = $(@node).find('.myBar')
+    to.width('40%')
 
 Batman.Filters.toClassName = (value) ->
   if      value >= 0  && value < 25  then return 'vlow'

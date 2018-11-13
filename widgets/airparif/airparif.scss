@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #50A4AF;
+$background-color:  #272b35;
 
 $vlow-color:        #79BC6A;
 $low-color:         #BBCF4C;
@@ -25,7 +25,8 @@ $vhigh-color:       #960018;
     }
 
 	.todayLine, .tomorrowLine {
-		margin-top: 10px;
+		margin-top: 30px;
+		text-align: center;
 	}
 
 	#todayIndex, #tomorrowIndex {
@@ -35,18 +36,18 @@ $vhigh-color:       #960018;
 	}
 
 	.vlow {
-		background-color: $vlow-color;
+		color: $vlow-color;
 	}
 	.low {
-		background-color: $low-color;
+		color: $low-color;
 	}
 	.medium {
-		background-color: $medium-color;
+		color: $medium-color;
 	}
 	.high {
-		background-color: $high-color;
+		color: $high-color;
 	}
 	.vhigh {
-		background-color: $vhigh-color;
+		color: $vhigh-color;
 	}
 }
