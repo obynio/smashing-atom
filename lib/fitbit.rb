@@ -7,10 +7,11 @@ class Fitbit
   attr_reader :client
 
   def initialize(options = {})
-    @client = FitbitAPI::Client.new(client_id: '22D4CQ',
-      client_secret: '99c2541bb3de1e1876475e17d6abb42f',
-      refresh_token: '1e7cb98009096b66611826a3eb502fb14eaede9092b5114f129c677dba55c5cf',
-      expires_at: 28800)
+    @client = FitbitAPI::Client.new(
+      client_id: ENV['FITBIT_CLIENT_ID'],
+      client_secret: ENV['FITBIT_CLIENT_SECRET'],
+      refresh_token: ENV['FITBIT_REFRESH_TOKEN'],
+      expires_at: ENV['FITBIT_EXPIRE_AT'])
   end
 
   def device
