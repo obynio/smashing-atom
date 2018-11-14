@@ -1,0 +1,13 @@
+<ul class="hours">
+    <li data-foreach-hour="hours" data-bind="hour.name" data-addclass-dark="hour.dark"></li>
+  </ul>
+  <ul class="locations">
+    <li data-foreach-location="locations" data-addclass-primary="location.primary" data-bind-class="location.display_location">
+      <div class="placeholder" data-hideif="location.primary"></div>
+      <div class="label" >
+        <div class="location" data-source="location.display_location" data-hideif="location.primary"></div>
+        <div class="location local" data-source="time" data-showif="location.primary"></div>
+      </div>
+      <div class="placeholder" data-showif="location.primary"></div>
+    </li>
+  </ul>

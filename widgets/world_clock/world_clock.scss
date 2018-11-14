@@ -1,0 +1,79 @@
+$background-color: #272b35;
+$dark-text: #333;
+$dark-background: grey;
+
+.widget.widget-world-clock {
+    //background-color: $background-color;
+    font-size: 2em;
+    padding-top: 55px;
+  
+    > ul li {
+      box-sizing: border-box;
+      display: inline-block;
+      color: $dark-text;
+  
+      &.primary { 
+        font-size: 2em;
+        margin-top: -185px;
+  
+        .location {
+          margin-bottom: -10px;
+        }
+  
+        .placeholder {
+          background: white;
+        }
+      }
+    }
+  
+    .hours {
+      margin-left: 20px;
+      margin-right: 20px;
+      li {
+        background: white;
+        width: 4.16%;
+  
+        &:not(:last-child) {
+          border-right: 1px solid;
+        }
+      }
+  
+      .dark {
+        background: $dark-background;
+        color: white;
+      }
+    }
+  
+    .locations {
+      text-align: left;
+      margin-left: 20px;
+      margin-right: 20px;
+  
+      li {
+        position: absolute;
+      }
+  
+      .placeholder {
+        height: 30px;
+        width: 2px;
+        background: $dark-background;
+      }
+  
+      .label {
+        position: relative;
+        color: $dark-background;
+  
+        .location {
+          margin-left: -50%;
+          &.local {
+            color: white;
+          }
+        }
+  
+        .minute {
+          position: absolute;
+          top: 0;
+        }
+      }
+    }
+  }

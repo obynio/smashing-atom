@@ -64,6 +64,7 @@ class Dashing.Ratp extends Dashing.Widget
     if oldValue != newValue
       $(spanId).fadeOut(->
         $(this).html(newValue).fadeIn(->
+          outer = $(tdId)[0]?.offsetWidth
           if outer < scroll
             $(tdId).addClass 'scroll'
           else

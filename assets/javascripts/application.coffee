@@ -2,6 +2,9 @@
 # It includes jquery & batman for you.
 #= require dashing.js
 
+#= require moment
+#= require moment-timezone
+#= require moment-timezone-data
 #= require_directory .
 #= require_tree ../../widgets
 

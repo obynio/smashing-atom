@@ -45,18 +45,18 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   }
 
   .label {
-    width:400px;
-    max-width:400px;
+    width:380px;
+    max-width:380px;
   }
 
   .value {
     font-weight: 300;
+    text-align: right;
   }
 
   .location {
     width:200px;
     max-width:200px;
-    width: 200px;
     text-transform: capitalize;
   }
 
