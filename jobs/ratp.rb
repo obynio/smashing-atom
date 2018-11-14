@@ -10,11 +10,8 @@ TRANSPORTS = [
   Transport.new(Type::TRAM, '3a', 'Porte d\'Italie', 'Porte de Vincennes'),
   Transport.new(Type::TRAM, '3a', 'Porte d\'Italie', 'Pont Garigliano - Hopital Europeen George Pompidou'),
   Transport.new(Type::BUS, '185', 'Roger Salengro - Fontainebleau', 'Choisy Sud'),
-  Transport.new(Type::BUS, '183', 'Verdun - Chateaudun', 'Porte de Choisy'),
   Transport.new(Type::BUS, '131', 'Roger Salengro - Fontainebleau', 'Rungis - la Fraternelle RER'),
-  Transport.new(Type::BUS, '47', 'Roger Salengro - Fontainebleau', 'Gare de l\'Est'),
-  Transport.new(Type::NOCTILIEN, '15', 'Roger Salengro - Fontainebleau', 'Villejuif - Louis Aragon-Metro'),
-  Transport.new(Type::NOCTILIEN, '22', 'Roger Salengro - Fontainebleau', 'Marche de Juvisy'),
+  Transport.new(Type::BUS, '47', 'Roger Salengro - Fontainebleau', 'Gare de l\'Est')
 ]
 
 # Init and Validate stations and destinations

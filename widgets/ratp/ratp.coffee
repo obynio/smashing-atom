@@ -40,7 +40,7 @@ class Dashing.Ratp extends Dashing.Widget
     cellDest.append spanDest
 
     cellTime = $ "<td>"
-    cellTime.addClass 'time'
+    cellTime.addClass 'ratp-time'
     cellTime.attr 'id', transportId + '-time'
 
     spanTime = $ "<span>"
@@ -64,6 +64,7 @@ class Dashing.Ratp extends Dashing.Widget
     if oldValue != newValue
       $(spanId).fadeOut(->
         $(this).html(newValue).fadeIn(->
+          outer = $(tdId)[0]?.offsetWidth
           if outer < scroll
             $(tdId).addClass 'scroll'
           else

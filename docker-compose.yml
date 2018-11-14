@@ -2,7 +2,7 @@ version: '3'
 
 services:
   dashboard:
-    image: obynio/cicada
+    image: obynio/atom
     restart: always
     ports:
       - 3030:3030

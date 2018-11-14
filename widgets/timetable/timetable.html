@@ -1,7 +1,7 @@
-<div data-foreach-event="events">
-  <div class="event-container">
-    <span class="label" data-bind="event.title"></span>
-    <span class="value" data-bind="event | aMomentPlease"></span>
-    <span class="location" data-bind="event.location"></span>
-  </div>
-</div>
+<table>
+  <tr data-foreach-event="events">
+    <td class="label" data-bind="event.title"></td>
+    <td class="location" data-bind="event.location"></td>
+    <td class="value" data-bind="event | aMomentPlease"></td>
+  </tr>
+</table>

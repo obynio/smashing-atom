@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #4183C5;
+$background-color:  #272b35;
 
 $title-color:       rgba(255, 255, 255, 0.7);
 $moreinfo-color:    rgba(255, 255, 255, 0.7);
@@ -23,36 +23,40 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     margin: 14px;
     margin-left: 20px;
     margin-right: 20px;
-    font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+  table td 
+  {
+    table-layout:fixed;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow:hidden;
+    text-align: left;
+    border-bottom: 1px solid #3c4049;
+    padding: 18px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  table tr:last-child td {
+    border-bottom: 0;
   }
 
   .label {
-    float: left;
-    text-align: left;
-    width: 380px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-size: 28px;
+    width:380px;
+    max-width:380px;
   }
 
   .value {
-    float: right;
-    margin-left: 15px;
-    font-weight: 600;
-    font-size: 28px;
+    font-weight: 300;
+    text-align: right;
   }
 
   .location {
-    float: left;
-    text-align: left;
-    margin-left: 30px;
-    font-weight: 600;
-    font-size: 28px;
-    width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    width:200px;
+    max-width:200px;
     text-transform: capitalize;
   }
 

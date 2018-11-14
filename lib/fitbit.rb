@@ -1,5 +1,4 @@
-require "fitgem_oauth2"
-require 'yaml'
+require "fitbit_api"
 require 'json'
 
 class Fitbit
@@ -7,11 +6,11 @@ class Fitbit
   attr_reader :client
 
   def initialize(options = {})
-    @client  = FitgemOauth2::Client.new(
-      token: ENV['FITBIT_TOKEN'],
+    @client = FitbitAPI::Client.new(
       client_id: ENV['FITBIT_CLIENT_ID'],
-      client_secret: ENV['FITBIT_CLIENT_SECRET']
-    )
+      client_secret: ENV['FITBIT_CLIENT_SECRET'],
+      refresh_token: ENV['FITBIT_REFRESH_TOKEN'],
+      expires_at: ENV['FITBIT_EXPIRE_AT'])
   end
 
   def device
@@ -84,7 +83,7 @@ class Fitbit
   private
 
   def devices
-    @devices ||= client.devices[:body]
+    @devices = client.devices
   end
 
   def current_device
@@ -92,15 +91,15 @@ class Fitbit
   end
 
   def today
-    @today ||= client.daily_activity_summary(Date.today)
+    @today = client.daily_activity_summary(Date.today)
   end
 
   def total
-    @total ||= client.lifetime_stats['lifetime']["total"]
+    @total = client.lifetime_stats['lifetime']["total"]
   end
 
   def distance_unit
-    @distance_unit ||= (client.user_info["user"]["distanceUnit"] == "en_US" ? "miles" : "km")
+    @distance_unit = (client.profile["user"]["distanceUnit"] == "en_US" ? "miles" : "km")
   end
 
   def distance_today
@@ -112,11 +111,11 @@ class Fitbit
   end
 
   def goals
-    @goals ||= client.goals('daily')["goals"]
+    @goals = client.daily_goals["goals"]
   end
 
   def sorted_leaderboard
-    @sorted_leaderboard ||= client.friends_leaderboard["friends"].sort { |one, other| one["rank"]["steps"] <=> other["rank"]["steps"] }.take 5
+    @sorted_leaderboard = client.friends_leaderboard["friends"].sort { |one, other| one["rank"]["steps"] <=> other["rank"]["steps"] }.take 5
   end
 
   def leaderboard_style(friend)

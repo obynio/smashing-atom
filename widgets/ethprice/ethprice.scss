@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #2980b9;
+$background-color:  #272b35;
 
 $title-color:       rgba(255, 255, 255, 0.7);
 $moreinfo-color:    rgba(255, 255, 255, 0.7);
@@ -33,6 +33,6 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   .price {
     font-size: 3em;
     position: relative; /* Declared position allows for location changes */
-    bottom: 25px; /* Moves the image 2px closer to the top of the page */
+    font-weight: 300;
   }
 }
