@@ -1,6 +1,4 @@
 # widget configuration
-=begin
-
 unit_system   = "METRIC"
 date_format   = "%H:%M"
 animate_views = true
@@ -21,5 +19,3 @@ SCHEDULER.every "5m", first_in: 0 do |job|
     }
   end
 end
-
-=end

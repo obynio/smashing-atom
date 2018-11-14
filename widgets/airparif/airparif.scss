@@ -22,32 +22,17 @@ $vhigh-color:       #960018;
     
     .image {
         max-width: 250px;
-    }
-
-	.todayLine, .tomorrowLine {
+	}
+	
+	#todayLine {
+		text-transform: uppercase;
+		color: #ffffff;
+		font-weight: 300;
 		margin-top: 30px;
-		text-align: center;
 	}
 
-	#todayIndex, #tomorrowIndex {
-		font-weight: bold;
+	#todayIndex {
 		padding-left: 3px;
 		padding-right: 3px;
-	}
-
-	.vlow {
-		color: $vlow-color;
-	}
-	.low {
-		color: $low-color;
-	}
-	.medium {
-		color: $medium-color;
-	}
-	.high {
-		color: $high-color;
-	}
-	.vhigh {
-		color: $vhigh-color;
 	}
 }

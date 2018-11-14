@@ -40,7 +40,7 @@ class Dashing.Ratp extends Dashing.Widget
     cellDest.append spanDest
 
     cellTime = $ "<td>"
-    cellTime.addClass 'time'
+    cellTime.addClass 'ratp-time'
     cellTime.attr 'id', transportId + '-time'
 
     spanTime = $ "<span>"

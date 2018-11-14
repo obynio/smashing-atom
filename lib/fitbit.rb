@@ -1,7 +1,4 @@
-=begin
-
 require "fitbit_api"
-require 'yaml'
 require 'json'
 
 class Fitbit
@@ -86,7 +83,7 @@ class Fitbit
   private
 
   def devices
-    @devices ||= client.devices
+    @devices = client.devices
   end
 
   def current_device
@@ -94,15 +91,15 @@ class Fitbit
   end
 
   def today
-    @today ||= client.daily_activity_summary(Date.today)
+    @today = client.daily_activity_summary(Date.today)
   end
 
   def total
-    @total ||= client.lifetime_stats['lifetime']["total"]
+    @total = client.lifetime_stats['lifetime']["total"]
   end
 
   def distance_unit
-    @distance_unit ||= (client.profile["user"]["distanceUnit"] == "en_US" ? "miles" : "km")
+    @distance_unit = (client.profile["user"]["distanceUnit"] == "en_US" ? "miles" : "km")
   end
 
   def distance_today
@@ -114,11 +111,11 @@ class Fitbit
   end
 
   def goals
-    @goals ||= client.daily_goals["goals"]
+    @goals = client.daily_goals["goals"]
   end
 
   def sorted_leaderboard
-    @sorted_leaderboard ||= client.friends_leaderboard["friends"].sort { |one, other| one["rank"]["steps"] <=> other["rank"]["steps"] }.take 5
+    @sorted_leaderboard = client.friends_leaderboard["friends"].sort { |one, other| one["rank"]["steps"] <=> other["rank"]["steps"] }.take 5
   end
 
   def leaderboard_style(friend)
@@ -152,5 +149,3 @@ class Fitbit
     "intensity_#{intensity}"
   end
 end
-
-=end
