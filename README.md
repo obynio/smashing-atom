@@ -2,7 +2,7 @@
 
 [![DroneCI](https://drone.obyn.io/api/badges/obynio/atom/status.svg)](https://drone.obyn.io/obynio/atom)
 
-> Created with the heart, built with the mind
+> My daily-life dashboard
 
 **Atom** is my personal dashboard running on a Raspberry Pi. The codebase is based on the [smashing](https://github.com/Smashing/smashing) modular dashboard with custom widgets on top of it.
 
