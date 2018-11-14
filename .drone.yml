@@ -1,9 +1,9 @@
 pipeline:
   deploy:
     image: plugins/docker
-    repo: obynio/cicada
+    repo: obynio/atom
     tags: latest
-    dockerfile: cicada.dockerfile
+    dockerfile: atom.dockerfile
     secrets: [ docker_username, docker_password ]
     when:
       event: [ push ]
