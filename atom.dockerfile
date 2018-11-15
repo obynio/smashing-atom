@@ -14,4 +14,4 @@ ENV PORT 3030
 EXPOSE $PORT
 
 ENTRYPOINT ["smashing"]
-CMD ["start", "-p", "$PORT"]
+CMD ["start", "-p", "$PORT", "-e", "production"]

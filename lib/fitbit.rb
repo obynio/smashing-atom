@@ -1,3 +1,4 @@
+=begin
 require "fitbit_api"
 require 'json'
 
@@ -149,3 +150,4 @@ class Fitbit
     "intensity_#{intensity}"
   end
 end
+=end

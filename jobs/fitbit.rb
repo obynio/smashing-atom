@@ -1,3 +1,4 @@
+=begin
 # widget configuration
 unit_system   = "METRIC"
 date_format   = "%H:%M"
@@ -19,3 +20,4 @@ SCHEDULER.every "5m", first_in: 0 do |job|
     }
   end
 end
+=end
