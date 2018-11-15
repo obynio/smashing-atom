@@ -27,19 +27,19 @@ def get_next(type, path, row)
     end
 end
 
-SCHEDULER.every '10s', first_in: 0 do |job|
+SCHEDULER.every '30s', first_in: 0 do |job|
     time = Time.new
     if 0 < time.hour && time.hour < 5
         lines = [
             {
                 name: "Noct 15",
-                icon: "ratp_noct_15.png",
+                icon: "noctilien/ligne15.svg",
                 in: {name: "Gabriel Peri", values: get_next('noctiliens', '15/dauphin+++anatole+france/R', 0)},
                 out: {name: "Gabriel Peri", values: get_next('noctiliens', '15/dauphin+++anatole+france/R', 1)}
             },
             {
                 name: "Noct 22",
-                icon: "ratp_noct_22.png",
+                icon: "noctilien/ligne22.svg",
                 in: {name: "Châtelet", values: get_next('noctiliens', '22/dauphin+++anatole+france/R', 0)},
                 out: {name: "Châtelet", values: get_next('noctiliens', '22/dauphin+++anatole+france/R', 1)}
             }
@@ -47,16 +47,16 @@ SCHEDULER.every '10s', first_in: 0 do |job|
     else
         lines = [
             {
-                name: "Bus 131",
-                icon: "ratp_bus_131.png",
-                in: {name: "Pt. Italie", values: get_next('bus', '131/ambroise+croizat/R', 0)},
-                out: {name: "Pt. Italie", values: get_next('bus', '131/ambroise+croizat/R', 1)}
-            },
-            {
                 name: "Metro 7",
-                icon: "ratp_metro_7.png",
+                icon: "metro/ligne7.svg",
                 in: {name: "Courneuve", values: get_next('metros', '7/villejuif+leo+lagrange/R', 0)},
                 out: {name: "Courneuve", values: get_next('metros', '7/villejuif+leo+lagrange/R', 1)}
+            },
+            {
+                name: "Bus 131",
+                icon: "bus/ligne131.svg",
+                in: {name: "Pt. Italie", values: get_next('bus', '131/ambroise+croizat/R', 0)},
+                out: {name: "Pt. Italie", values: get_next('bus', '131/ambroise+croizat/R', 1)}
             }
         ]
     end

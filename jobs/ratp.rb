@@ -1,5 +1,3 @@
-require_relative 'ratp_utils'
-
 # Uncomment and define transports below
 # (or alternatively, define them in config/settings.rb)
 
@@ -9,9 +7,12 @@ TRANSPORTS = [
   Transport.new(Type::METRO, '7', 'Le Kremlin-Bicetre', 'Mairie d\'Ivry / Villejuif-Louis Aragon'),
   Transport.new(Type::TRAM, '3a', 'Porte d\'Italie', 'Porte de Vincennes'),
   Transport.new(Type::TRAM, '3a', 'Porte d\'Italie', 'Pont Garigliano - Hopital Europeen George Pompidou'),
-  Transport.new(Type::BUS, '185', 'Roger Salengro - Fontainebleau', 'Choisy Sud'),
+  Transport.new(Type::BUS, '47', 'Roger Salengro - Fontainebleau', 'Gare de l\'Est'),
+  Transport.new(Type::BUS, '125', 'Roger Salengro - Fontainebleau', 'Ecole Veterinaire de Maisons-Alfort'),
   Transport.new(Type::BUS, '131', 'Roger Salengro - Fontainebleau', 'Rungis - la Fraternelle RER'),
-  Transport.new(Type::BUS, '47', 'Roger Salengro - Fontainebleau', 'Gare de l\'Est')
+  Transport.new(Type::BUS, '185', 'Roger Salengro - Fontainebleau', 'Choisy Sud'),
+  Transport.new(Type::NOCTILIEN, '15', 'Roger Salengro - Fontainebleau', 'Villejuif - Louis Aragon-Metro'),
+  Transport.new(Type::NOCTILIEN, '22', 'Roger Salengro - Fontainebleau', 'Marche de Juvisy'),
 ]
 
 # Init and Validate stations and destinations
@@ -37,7 +38,7 @@ TRANSPORTS.each do |transport|
   end
 end
 
-SCHEDULER.every '10s', first_in: 0 do
+SCHEDULER.every '30s', first_in: 0 do
   results = []
 
   TRANSPORTS.each do |transport|
