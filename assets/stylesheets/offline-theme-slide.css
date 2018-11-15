@@ -458,7 +458,7 @@
   }
 }
 
-/* line 16, ../sass/offline-theme-dark.sass */
+/* line 21, ../sass/offline-theme-slide.sass */
 .offline-ui {
   -webkit-border-radius: 0 0 4px 4px;
   -moz-border-radius: 0 0 4px 4px;
@@ -466,16 +466,13 @@
   -o-border-radius: 0 0 4px 4px;
   border-radius: 0 0 4px 4px;
   font-family: "Helvetica Neue", sans-serif;
-  font-weight: 300;
   padding: 1em;
   width: 38em;
   max-width: 100%;
-  background:#394155;
-  color: #cccccc;
   overflow: hidden;
 }
 @media (max-width: 38em) {
-  /* line 16, ../sass/offline-theme-dark.sass */
+  /* line 21, ../sass/offline-theme-slide.sass */
   .offline-ui {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -484,38 +481,13 @@
     border-radius: 0;
   }
 }
-/* line 30, ../sass/offline-theme-dark.sass */
-.offline-ui .offline-ui-content {
-  padding-left: 2em;
-}
-/* line 33, ../sass/offline-theme-dark.sass */
-.offline-ui .offline-ui-content:before {
-  line-height: 1.25em;
-}
-/* line 36, ../sass/offline-theme-dark.sass */
-.offline-ui .offline-ui-content:after {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%;
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 1em;
-  margin: auto;
-  height: 1em;
-  width: 1em;
-}
-/* line 48, ../sass/offline-theme-dark.sass */
+/* line 32, ../sass/offline-theme-slide.sass */
 .offline-ui .offline-ui-retry {
   position: absolute;
   right: 3em;
   top: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.1);
   text-decoration: none;
   color: inherit;
   line-height: 3.5em;
@@ -523,7 +495,7 @@
   margin: auto;
   padding: 0 1em;
 }
-/* line 61, ../sass/offline-theme-dark.sass */
+/* line 45, ../sass/offline-theme-slide.sass */
 .offline-ui.offline-ui-up {
   -webkit-animation: offline-dropout forwards 0.5s 2s;
   -moz-animation: offline-dropout forwards 0.5s 2s;
@@ -531,12 +503,10 @@
   -o-animation: offline-dropout forwards 0.5s 2s;
   animation: offline-dropout forwards 0.5s 2s;
   -webkit-backface-visibility: hidden;
+  background: #d6e9c6;
+  color: #468847;
 }
-/* line 64, ../sass/offline-theme-dark.sass */
-.offline-ui.offline-ui-up .offline-ui-content:after {
-  background: #80d580;
-}
-/* line 67, ../sass/offline-theme-dark.sass */
+/* line 50, ../sass/offline-theme-slide.sass */
 .offline-ui.offline-ui-down {
   -webkit-animation: offline-dropin 0.5s;
   -moz-animation: offline-dropin 0.5s;
@@ -544,20 +514,16 @@
   -o-animation: offline-dropin 0.5s;
   animation: offline-dropin 0.5s;
   -webkit-backface-visibility: hidden;
+  background: #ec8787;
+  color: #551313;
 }
-/* line 70, ../sass/offline-theme-dark.sass */
-.offline-ui.offline-ui-down .offline-ui-content:after {
-  background: #e24949;
-}
-/* line 73, ../sass/offline-theme-dark.sass */
+/* line 55, ../sass/offline-theme-slide.sass */
 .offline-ui.offline-ui-down.offline-ui-connecting, .offline-ui.offline-ui-down.offline-ui-waiting {
+  background: #f8ecad;
+  color: #7c6d1f;
   padding-right: 3em;
 }
-/* line 76, ../sass/offline-theme-dark.sass */
-.offline-ui.offline-ui-down.offline-ui-connecting .offline-ui-content:after, .offline-ui.offline-ui-down.offline-ui-waiting .offline-ui-content:after {
-  background: #e24949;
-}
-/* line 79, ../sass/offline-theme-dark.sass */
+/* line 60, ../sass/offline-theme-slide.sass */
 .offline-ui.offline-ui-down.offline-ui-connecting:after, .offline-ui.offline-ui-down.offline-ui-waiting:after {
   -webkit-animation: offline-rotation 0.7s linear infinite;
   -moz-animation: offline-rotation 0.7s linear infinite;
@@ -579,16 +545,16 @@
   margin: auto;
   height: 1em;
   width: 1em;
-  border: 2px solid transparent;
-  border-top-color: rgba(255, 255, 255, 0.5);
-  border-left-color: rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-top-color: #7c6d1f;
+  border-left-color: #7c6d1f;
   opacity: 0.7;
 }
-/* line 96, ../sass/offline-theme-dark.sass */
+/* line 77, ../sass/offline-theme-slide.sass */
 .offline-ui.offline-ui-down.offline-ui-waiting {
   padding-right: 11em;
 }
-/* line 99, ../sass/offline-theme-dark.sass */
+/* line 80, ../sass/offline-theme-slide.sass */
 .offline-ui.offline-ui-down.offline-ui-waiting.offline-ui-reconnect-failed-2s {
   padding-right: 0;
 }
