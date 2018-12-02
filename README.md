@@ -6,6 +6,8 @@
 
 **Atom** is my personal dashboard running on a Raspberry Pi. The codebase is based on the [smashing](https://github.com/Smashing/smashing) modular dashboard with custom widgets on top of it.
 
+![dashboard-compressor](https://user-images.githubusercontent.com/2095991/49346347-223e5000-f691-11e8-9214-913d143029b6.png)
+
 ## Features
 
 * synchonized timetable for my school
@@ -20,7 +22,15 @@
 * world clock
 * fitbit activity tracking
 
-## Installation
+## Deployment
+
+```
+# Adapt the `docker-compose` to fit your needs
+$ docker-compose build
+$ docker-compose up -d
+```
+
+## Development
 
 ```
 # Install bundler
@@ -32,4 +42,3 @@ $ bundle
 # Start atom
 $ smashing start
 ```
-
