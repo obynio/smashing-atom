@@ -2,7 +2,7 @@ require 'dashing'
 
 configure do
   set :auth_token, 'YOUR_AUTH_TOKEN'
-  set :default_dashboard, 'srs'
+  set :default_dashboard, 'obynio'
   
   # See http://www.sinatrarb.com/intro.html > Available Template Languages on
   # how to add additional template languages.
