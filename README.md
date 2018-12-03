@@ -6,7 +6,7 @@
 
 **Atom** is my personal dashboard running on a Raspberry Pi. The codebase is based on the [smashing](https://github.com/Smashing/smashing) modular dashboard with custom widgets on top of it.
 
-![atom-dashboard](https://user-images.githubusercontent.com/2095991/49383546-4776a100-f719-11e8-8803-b036705a175c.png)
+![atom-dashboard](https://user-images.githubusercontent.com/2095991/49384040-72152980-f71a-11e8-86bf-d25b29b54f52.png)
 
 ## Features
 
