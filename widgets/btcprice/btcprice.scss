@@ -9,7 +9,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
 // ----------------------------------------------------------------------------
 // Widget-text styles
 // ----------------------------------------------------------------------------
-.widget-ethprice {
+.widget-btcprice {
 
   background-color: $background-color;
 
@@ -17,7 +17,7 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
     color: $title-color;
   }
 
-  .eth_logo {
+  .btc_logo {
     position: relative; /* Declared position allows for location changes */
     top: -20px; /* Moves the image 2px closer to the top of the page */
   }
@@ -25,10 +25,10 @@ $moreinfo-color:    rgba(255, 255, 255, 0.7);
   .more-info {
     color: $moreinfo-color;
   }
-  
+
   .price {
     font-size: 3em;
-    position: relative; /* Declared position allows for location changes */
+    position: relative;
     font-weight: 300;
   }
 }

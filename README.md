@@ -14,6 +14,7 @@
 * current time and date
 * network latency
 * current ethereum price
+* current bitcoin price
 * nearby bus and metro schedules
 * current weather in paris
 * air pollution index and map
