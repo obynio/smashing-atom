@@ -27,7 +27,7 @@ def get_next(type, path, row)
     end
 end
 
-SCHEDULER.every '30s', first_in: 0 do |job|
+SCHEDULER.every '1m', first_in: 0 do |job|
     time = Time.new
     if 0 < time.hour && time.hour < 5
         lines = [

@@ -1,6 +1,6 @@
 require 'mini_magick'
 
-SCHEDULER.every '5m', first_in: 0 do
+SCHEDULER.every '1h', first_in: 0 do
   image = MiniMagick::Image.open('https://www.airparif.asso.fr/services/cartes/indice/date/jour')
 
   # Remove text indicating the current day
@@ -24,7 +24,7 @@ SCHEDULER.every '5m', first_in: 0 do
   # Crop the unnecessary sides
   image.crop '405x323+6+20'
 
-  data = fetch_data('http://www.airparif.asso.fr/appli/api/1.1/indice')
+  data = fetch_data('https://www.airparif.asso.fr/appli/api/1.1/indice')
   jour = data[1]['indice']
   demain = data[2]['indice']
 

@@ -20,7 +20,6 @@
 * xkcd daily comic
 * epiquote.fr
 * world clock
-* fitbit activity tracking
 
 ## Deployment
 
