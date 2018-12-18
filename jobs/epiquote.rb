@@ -6,7 +6,7 @@ class Epiquote
         doc = Nokogiri::HTML(open("https://epiquote.fr/random"))
         quote_headlines = [];
         doc.xpath('//blockquote').each do |quote_item|
-            if quote_item.xpath('p[2]').to_html.scan(/<br>/).length < 6
+            if quote_item.xpath('p[2]').to_html.scan(/<br>/).length < 5
                 quote_headline = EpiquoteBuilder.BuildFrom(quote_item)
                 quote_headlines.push(quote_headline)
             end
