@@ -47,16 +47,16 @@ SCHEDULER.every '1m', first_in: 0 do |job|
     else
         lines = [
             {
+                name: "Bus 185",
+                icon: "bus/ligne185.svg",
+                in: {name: "Pt. Italie", values: get_next('bus', '185/dauphin+++anatole+france/R', 0)},
+                out: {name: "Pt. Italie", values: get_next('bus', '185/dauphin+++anatole+france/R', 1)}
+            },
+            {
                 name: "Metro 7",
                 icon: "metro/ligne7.svg",
                 in: {name: "Courneuve", values: get_next('metros', '7/villejuif+leo+lagrange/R', 0)},
                 out: {name: "Courneuve", values: get_next('metros', '7/villejuif+leo+lagrange/R', 1)}
-            },
-            {
-                name: "Bus 131",
-                icon: "bus/ligne131.svg",
-                in: {name: "Pt. Italie", values: get_next('bus', '131/ambroise+croizat/R', 0)},
-                out: {name: "Pt. Italie", values: get_next('bus', '131/ambroise+croizat/R', 1)}
             }
         ]
     end
