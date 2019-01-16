@@ -2,13 +2,15 @@ require 'net/http'
 require 'icalendar'
 require 'open-uri'
 
-calendars = {srs: "https://chronosvenger.me/?classe=SRS.ics"}
+# https://chronosvenger.me/?classe=SRS.ics
+# https://ichronos.net/feed/SRS.ics
+calendars = {srs: "https://ichronos.net/feed/SRS.ics"}
 
-SCHEDULER.every '10m', :first_in => 0 do |job|
+SCHEDULER.every '30m', :first_in => 0 do |job|
 
   calendars.each do |cal_name, cal_uri|
 
-    ics  = open(cal_uri) { |f| f.read }
+    ics  = open(cal_uri, 'User-Agent' => 'Atom') { |f| f.read }
     cal = Icalendar::Calendar.parse(ics).first
     events = cal.events
 
@@ -22,7 +24,7 @@ SCHEDULER.every '10m', :first_in => 0 do |job|
     events = events.map do |e|
       {
         title: e.summary,
-        location: e.location.lines.first,
+        location: e.location ? e.location.tr('.', '') : '',
         start: e.dtstart.to_time.to_i,
         end: e.dtend.to_time.to_i
       }
