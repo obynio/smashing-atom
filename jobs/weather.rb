@@ -22,7 +22,7 @@ SCHEDULER.every '30m', :first_in => 0 do |job|
 
   send_event('weather', { :temp => "#{current_temp}",
                           :condition => detailed_info['main'],
-                          :title => "#{weather_data['name']} Weather",
+                          :title => "#{weather_data['name']}",
                           :climacon => climacon_class(detailed_info['id'])})
 end
 
