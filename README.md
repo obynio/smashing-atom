@@ -24,6 +24,8 @@
 
 ## Deployment
 
+The weather widget requires an [OpenWeatherMap](https://openweathermap.org/) API key. Please fill it in the `docker-compose.yml`.
+
 ```
 # Adapt the `docker-compose` to fit your needs
 $ docker-compose build
