@@ -23,8 +23,8 @@ SCHEDULER.every '30m', :first_in => 0 do |job|
 
     events = events.map do |e|
       {
-        title: e.summary,
-        location: e.location ? e.location.tr('.', '') : '',
+        title: e.summary ? e.summary : '¯\_(ツ)_/¯',
+        location: e.location ? e.location.tr('.', '') : '¯\_(ツ)_/¯',
         start: e.dtstart.to_time.to_i,
         end: e.dtend.to_time.to_i
       }
