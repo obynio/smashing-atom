@@ -16,15 +16,13 @@
 * current ethereum price
 * current bitcoin price
 * nearby bus and metro schedules
-* current weather in paris
+* current weather in paris, requires an openweathermap api key
 * air pollution index and map
 * xkcd daily comic
 * epiquote.fr
 * world clock
 
 ## Deployment
-
-The weather widget requires an [OpenWeatherMap](https://openweathermap.org/) API key. Please fill it in the `docker-compose.yml`.
 
 ```
 # Adapt the `docker-compose` to fit your needs
