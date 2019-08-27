@@ -4,7 +4,7 @@
 
 > My daily-life dashboard
 
-**Atom** is my personal dashboard running on a Raspberry Pi. The codebase is based on the [smashing](https://github.com/Smashing/smashing) modular dashboard with custom widgets on top of it.
+**Atom** is my personal dashboard running on a Raspberry Pi. The codebase is based on the [smashing](https://github.com/Smashing/smashing) modular dashboard with custom widgets build on top of it.
 
 ![atom-dashboard](https://user-images.githubusercontent.com/2095991/49383546-4776a100-f719-11e8-8803-b036705a175c.png)
 
