@@ -1,0 +1,59 @@
+// ----------------------------------------------------------------------------
+// Sass declarations
+// ----------------------------------------------------------------------------
+$background-color:  #272b35;
+$value-color:       #fff;
+ 
+$title-color:       rgba(255, 255, 255, 0.7);;
+$moreinfo-color:    rgba(255, 255, 255, 0.7);;
+ 
+// ----------------------------------------------------------------------------
+// Widget-weather styles
+// ----------------------------------------------------------------------------
+.widget-news {
+
+  background-color: $background-color;
+  vertical-align: baseline !important;
+
+  .shadow {  
+    display: inline;
+    background: #fff;
+    line-height: 2em;
+    padding: .1em;
+    color: #272b35;
+    box-shadow: .3em 0 0 #fff, -.3em 0 0 #fff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.2em;
+    font-weight: 300;
+  }
+
+  .inline {
+      margin-left: .3em;
+      margin-right: .3em;
+  }
+
+  .headline-container {
+    display: none;
+    text-align: left;
+    margin-top: 6em;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+  }
+
+  .heading span {
+    color: black;
+  }
+
+  .heading img {
+    float: left;
+    margin-left: 1.5em;
+    margin-top: 1.5em;
+  }
+
+  .description {
+    font-size: 0.8em;
+    text-align: left;
+    margin-top: 40px;
+    font-family: 'Roboto Mono', monospace;
+  }
+}
