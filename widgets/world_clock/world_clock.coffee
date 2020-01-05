@@ -1,11 +1,11 @@
 class Dashing.WorldClock extends Dashing.Widget
   # configuration
   locations: [
-    { zone: "Asia/Singapore", display_location: "SG", primary: true },
-    { zone: "Asia/Jakarta", display_location: "JK" },
+    { zone: "Europe/Paris", display_location: "FR", primary: true },
+    { zone: "Asia/Tokyo", display_location: "TYO" },
     { zone: "America/Los_Angeles", display_location: "SF" },
     { zone: "America/New_York", display_location: "NYC" },
-    { zone: "Europe/London", display_location: "EDH" }
+    { zone: "Europe/London", display_location: "LDN" }
   ]
 
   startClock: ->
