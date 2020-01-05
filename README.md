@@ -21,6 +21,7 @@
 * xkcd daily comic
 * epiquote.fr
 * world clock
+* currated news from bbc
 
 ## Deployment
 
