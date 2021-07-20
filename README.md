@@ -1,4 +1,4 @@
-# Atom
+# Smashing Atom
 > My daily-life dashboard
 
 **Atom** is my personal dashboard running on a Raspberry Pi. The codebase is based on the [smashing](https://github.com/Smashing/smashing) modular dashboard with custom widgets build on top of it.
