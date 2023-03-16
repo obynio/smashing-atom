@@ -22,7 +22,7 @@ GEM
     mustermann (1.0.3)
     nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
-    rack (2.0.8)
+    rack (2.0.9.3)
     rack-protection (2.0.5)
       rack
     rufus-scheduler (3.4.2)
